@@ -1,0 +1,9 @@
+*.o
+*.obj
+*.out
+*.txt
+mangen
+doc
+html/
+latex/
+.vscode/
