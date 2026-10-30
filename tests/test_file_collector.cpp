@@ -19,8 +19,20 @@ TEST(FileCollector, OneChunk){
     EXPECT_EQ((*file)[2], 7);
     EXPECT_EQ((*file)[3], 6);
     EXPECT_EQ((*file)[4], 5);
+    EXPECT_EQ((*file)[5], 4);
     EXPECT_EQ((*file)[6], 3);
     EXPECT_EQ((*file)[7], 2);
     EXPECT_EQ((*file)[8], 1);
     EXPECT_EQ((*file)[9], 0);
+}
+
+TEST(FileCollector, EmptyFile) {
+    FileCollector obj;
+    obj.CollectFile(22, 0);
+
+    EXPECT_TRUE(obj.IsComplete(22));
+
+    auto f = obj.GetFile(22);
+    ASSERT_NE(f, nullptr);
+    EXPECT_TRUE(f->empty());
 }
