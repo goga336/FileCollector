@@ -2,8 +2,15 @@
 *.obj
 *.out
 *.txt
-mangen
 doc
 html/
 latex/
 .vscode/
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+compile_commands.json
+Makefile
+cmake_install.cmake
