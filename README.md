@@ -27,7 +27,7 @@ obj.CollectFile(1, 10); // Допустим передается файл раз
  
 obj.OnNewChunk(1, 0, {'A', 'B', 'C', 'D'}); // первые 4 байта (pos = 0)
 obj.OnNewChunk(1, 2, {'C', 'D', 'E', 'F'}); // пересекается с предыдущим (начиная с pos = 2)
-obj.OnNewChunk(1, 6, {'G', 'H', 'I', 'J'}); // не пересекается с предыдущим
+obj.OnNewChunk(1, 6, {'G', 'H', 'I', 'J'}); // непересекается с предыдущим
  
 if (obj.IsComplete(1)) {
     auto file = obj.GetFile(1);               // A B C D E F G H I J

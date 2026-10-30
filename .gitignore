@@ -1,7 +1,6 @@
 *.o
 *.obj
 *.out
-*.txt
 doc
 html/
 latex/
