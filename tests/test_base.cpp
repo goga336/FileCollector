@@ -1,6 +1,8 @@
 #include <cstdint>
 #include <gtest/gtest.h>
-#include "../inc/file_collector.hpp"
+#include "file_collector.hpp"
+
+// Тесты для проверки общей работоспособности класса
 
 TEST(FileCollector, OneChunk){
     FileCollector obj;

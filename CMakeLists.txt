@@ -20,7 +20,7 @@ find_package(Threads REQUIRED)
 
 add_executable(
   file_collector_test
-  tests/test_file_collector.cpp
+  tests/test_base.cpp
   tests/test_errors.cpp
   tests/test_chunks.cpp
   tests/test_read.cpp
