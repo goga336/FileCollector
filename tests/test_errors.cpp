@@ -58,3 +58,17 @@ TEST(Errors, ChunkAfterComplete) {
     EXPECT_NO_THROW(obj.OnNewChunk(1, 0, std::move(duplicate)));
     EXPECT_TRUE(obj.IsComplete(1));
 }
+
+// Тест для проверки CollectFile при попытке зарегистрировать файл, который превышает максимальный размер вектора
+TEST(Errors, CollectFileTooLargeThrows) {
+    FileCollector obj;
+    EXPECT_THROW(obj.CollectFile(11, std::numeric_limits<size_t>::max()),
+                 std::runtime_error);
+}
+
+// Тест для проверки CollectFile при нехватке памяти под буфер файла
+TEST(Errors, CollectFileOutOfMemoryThrows) {
+    FileCollector obj;
+    constexpr size_t veryHugeSize = size_t{1} << 60; // 1 эксабайт
+    EXPECT_THROW(obj.CollectFile(1, veryHugeSize), std::runtime_error);
+}
