@@ -1,6 +1,6 @@
 #include <cstdint>
 #include <gtest/gtest.h>
-#include "../inc/file_collector.hpp"
+#include "file_collector.hpp"
 
 //  Тесты для проверки обработки ошибок
 
