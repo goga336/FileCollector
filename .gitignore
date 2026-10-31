@@ -1,11 +1,15 @@
 *.o
 *.obj
 *.out
+*.gcda
+*.gcno
+cov.*
 doc
 html/
 latex/
 .vscode/
 build/
+build-*/
 cmake-build-*/
 CMakeCache.txt
 CMakeFiles/
